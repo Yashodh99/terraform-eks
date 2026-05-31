@@ -1,4 +1,3 @@
-
 terraform {
   required_version = ">= 0.12"
   required_providers {
@@ -12,7 +11,7 @@ terraform {
     }
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 3.68.0"
+      version = ">= 3.68.0, < 5.0.0"  # Cap it below v5.0.0 to fix the crash
     }
     local = {
       source  = "hashicorp/local"
